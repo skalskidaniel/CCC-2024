@@ -9,16 +9,16 @@ using namespace std;
 int main()
 {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
 
-    ofstream outputFile("output3.txt");
+    ifstream inputFile("inputs/level3/level3_5.in");
+    ofstream outputFile("outputs/level3/output3_5.out");
     int lawns;
-    cin >> lawns;
+    inputFile >> lawns;
     while (lawns--)
     {
         bool is_valid = true;
         int a, b;
-        cin >> a >> b;
+        inputFile >> a >> b;
         
         int tree_x = -1, tree_y = -1;
         char tab[b][a];
@@ -26,7 +26,7 @@ int main()
         {
             for (int j = 0; j < a; ++j)
             {
-                cin >> tab[i][j];
+                inputFile >> tab[i][j];
                 
                 if (tab[i][j] == 'X')
                 {
@@ -39,7 +39,7 @@ int main()
 
         // linia z trawnikiem 1.2
         string line;
-        cin >> line;
+        inputFile >> line;
         
         bool visited[2003][2003] = {false};
         for (int i = 0; i < 2003; i++)

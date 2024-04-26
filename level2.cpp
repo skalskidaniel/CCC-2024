@@ -10,16 +10,16 @@ bool tab[2001][2001];
 int main()
 {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
 
-    ofstream outputFile("output2.txt");
+    ifstream inputFile("inputs/level2/level2_5.in");
+    ofstream outputFile("outputs/level2/output2_5.out");
     int n;
-    cin >> n;
+    inputFile >> n;
 
     while(n--)
     {
         string line;
-        cin >> line;
+        inputFile >> line;
         
         int i = 1000, j = 1000;
         int min_i = i, 

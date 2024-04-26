@@ -8,16 +8,19 @@ using namespace std;
 int main()
 {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    int n;
-    cin >> n;
 
-    ofstream outputFile("output1.txt");
+    ifstream inputFile("inputs/level1/level1_5.in");
+    ofstream outputFile("outputs/level1/output1_5.out");
+    
+    int n;
+    inputFile >> n;
+    
+    
 
     while (n--)
     {
         string line;
-        cin >> line;
+        inputFile >> line;
         int w, s, a, d;
         w = count(line.begin(), line.end(), 'W');
         s = count(line.begin(), line.end(), 'S');
